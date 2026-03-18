@@ -1,0 +1,1 @@
+            result.push(arr[i]);
