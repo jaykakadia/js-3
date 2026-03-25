@@ -19,15 +19,17 @@ let arr = [
 ]
 
 function groupElementsByProperty(arr) {
-    let result = {};
+    let res = {};
     for (let i = 0; i < arr.length; i++) {
-        if (result[arr[i].name]) {
-            result[arr[i].name].push(arr[i].id);
-        } else {
-            result[arr[i].name] = [arr[i].id];
-        }
+      let name = arr[i].name;
+      let id = arr[i].id;
+
+      if (!res[name]) {
+        res[name] = [];
+      }
+      res[name].push(id);
     }
-    return result;
+    return res;
 }
 console.log(groupElementsByProperty(arr));
     

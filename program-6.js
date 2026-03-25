@@ -39,12 +39,12 @@ const arr = [
 ];
 
 function modifyProperty(arr, id, newName) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].employee_id === id) {
-            arr[i].employee_name = newName;
-        }
+  for (let i = 0; i < arr.length; i++) {
+    if (id === arr[i].employee_id) {
+      arr[i].employee_name = newName;
+      return arr;
     }
-    return arr;
+  }
 }
 
 console.log(modifyProperty(arr, 2, "Rahul"));

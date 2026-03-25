@@ -61,20 +61,29 @@ const arr = [
     }
 ];
 
+
 function countOccurrences(arr) {
-    let result = [];
-    for (let i = 0; i < arr.length; i++) {
-        let count = 0;
-        if (result.some(item => item.employeeName === arr[i].employeeName)) {
-            continue;
-        }
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[i].employeeName === arr[j].employeeName) {
-                count++;
-            }
-        }
-        result.push({ employeeName: arr[i].employeeName, occurrences: count });
+  let output = [];
+  for (let i = 0; i < arr.length; i++) {
+    let already_count = false;
+    for (let j = 0; j < output.length; j++) {
+      if (arr[i].employeeName == output[j].employeeName) {
+        already_count = true;
+        break;
+      }
     }
-    return result;
+    if (!already_count) {
+      let count = 0;
+      for (let j = 0; j < arr.length; j++) {
+        if (arr[i].employeeName == arr[j].employeeName) {
+          count++;
+        }
+      }
+      output.push({ employeeName: arr[i].employeeName, occurance: count });
+    }
+  }
+  return output;
 }
+console.log(countOccurrences(arr));
+
 console.log(countOccurrences(arr));
