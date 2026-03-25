@@ -24,7 +24,10 @@ const arrayObj = [{
 }];
 
 function getIndexByProperty(arr, key, value) {
-    return arr.findIndex(obj => obj[key] === value);
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i][key] == value) return i;
+    }
+    return -1;
 }
 
 console.log(getIndexByProperty(arrayObj, 'prop_1', 'val_4'));  // 1
