@@ -36,15 +36,16 @@ console.log(flattenarr(obj));
 
 function flattenarr(obj) {
     let res = {};
-    for (const i in obj) {
-        if ((typeof obj[i]) === 'object') {
-            const temp = flattenarr(obj[i]);
+    for (let i = 0 ; i < Object.keys(obj).length; i++) {
+        let key = Object.keys(obj)[i];
+        if ((typeof obj[key]) === 'object') {
+            const temp = flattenarr(obj[key]);
             for (const j in temp) {
-                res[i + '.' + j] = temp[j];
+                res[key + '.' + j] = temp[j];
             }
         }
         else {
-            res[i] = obj[i];
+            res[key] = obj[key];
         }
     }
     return res;

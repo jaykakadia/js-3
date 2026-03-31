@@ -10,7 +10,8 @@
 
 
 function checkobj(obj1, obj2) {
-    for (let key in obj2) {
+    for (let i = 0; i < Object.keys(obj2).length; i++) {
+        let key = Object.keys(obj2)[i];
         if (obj1[key] !== obj2[key]) {
             return false;
         }

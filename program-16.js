@@ -11,10 +11,16 @@ let set2 = new Set([3, 4, 5, 6]);
 
 function intersection(set1, set2) {
     let result = [];
-    for (let i of set1) {
-        if (set2.has(i)) {
-            result.push(i);
+    let arr1 = [...set1];
+    let arr2 = [...set2];
+    for (let i = 0 ; i < set1.size; i++) {
+        let curr = arr1[i];
+        for(let j = 0; j < set2.size; j++) {
+            if(curr === arr2[j]) {
+                result.push(curr);
+            }        
         }
+        
     }
     return result;
 }
