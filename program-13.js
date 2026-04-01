@@ -11,7 +11,7 @@
 // Output:
 // { 'John' => [ 1 ], 'Alice' => [ 2, 4 ], 'Bob' => [ 3 ] }
 
-let arr = [
+const arr = [
     { id: 1, name: "John" },
     { id: 2, name: "Alice" },
     { id: 3, name: "Bob" },
@@ -19,10 +19,10 @@ let arr = [
 ]
 
 function groupElementsByProperty(arr) {
-    let res = {};
+    const res = {};
     for (let i = 0; i < arr.length; i++) {
-      let name = arr[i].name;
-      let id = arr[i].id;
+      const name = arr[i].name;
+      const id = arr[i].id;
 
       if (!res[name]) {
         res[name] = [];

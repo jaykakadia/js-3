@@ -5,10 +5,10 @@
 
 
 function generateCombinations(str) {
-    let combinations = [];
+    const combinations = [];
     for (let i = 0; i < str.length; i++) {
         for (let j = i + 1; j <= str.length; j++) {
-            let currstr = str.substring(i, j);
+            const currstr = str.substring(i, j);
             combinations.push(currstr);
         }
     }

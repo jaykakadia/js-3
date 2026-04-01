@@ -63,7 +63,7 @@ const arr = [
 
 
 function countOccurrences(arr) {
-  let output = [];
+  const output = [];
   for (let i = 0; i < arr.length; i++) {
     let already_count = false;
     for (let j = 0; j < output.length; j++) {

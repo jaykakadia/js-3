@@ -4,7 +4,7 @@
 // Output: { 'h': 1, 'e': 1, 'l': 2, 'o': 1 }
 
 function charFrequency(str) {
-    let result = {};
+    const result = {};
     for (let i = 0; i < str.length; i++) {
         if (result[str[i]]) {
             result[str[i]]++;

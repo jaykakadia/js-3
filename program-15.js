@@ -15,12 +15,12 @@
 
 // Output: true
 
-let set1 = new Set([1, 2, 3, 4, 5]);
-let set2 = new Set([3, 4]);
+const set1 = new Set([1, 2, 3, 4, 5]);
+const set2 = new Set([3, 4]);
 
 function isSubset(set1, set2) {
-    let arr1 = [...set1];
-    let arr2 = [...set2];
+    const arr1 = [...set1];
+    const arr2 = [...set2];
     for(let i = 0; i < set1.size; i++) {
         let contains = false;
         for(let j = 0; j < set2.size; j++) {

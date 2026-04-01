@@ -22,7 +22,7 @@
 // Output: 
 // total value for "price": 1850
 // total value for "quantity": 6
-arr = [
+const arr = [
     {
         product: "Laptop",
         price: 1000,

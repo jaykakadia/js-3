@@ -6,15 +6,15 @@
 
 // Output: [3, 4]
 
-let set1 = new Set([1, 2, 3, 4]);
-let set2 = new Set([3, 4, 5, 6]);
+const set1 = new Set([1, 2, 3, 4]);
+const set2 = new Set([3, 4, 5, 6]);
 
 function intersection(set1, set2) {
-    let result = [];
-    let arr1 = [...set1];
-    let arr2 = [...set2];
+    const result = [];
+    const arr1 = [...set1];
+    const arr2 = [...set2];
     for (let i = 0 ; i < set1.size; i++) {
-        let curr = arr1[i];
+        const curr = arr1[i];
         for(let j = 0; j < set2.size; j++) {
             if(curr === arr2[j]) {
                 result.push(curr);

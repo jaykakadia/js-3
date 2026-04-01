@@ -1,6 +1,6 @@
 // Write a JavaScript program to flatten object into single depth object.
 
-// Input: 
+// Input:
 // obj = {
 //     Company: "GeeksforGeeks",
 //     Address: "Noida",
@@ -12,7 +12,7 @@
 //     }
 // };
 
-// Output: 
+// Output:
 // obj = {
 //     Company: 'GeeksforGeeks',
 //     Address: 'Noida',
@@ -22,34 +22,30 @@
 //     'mentor.JavaScript': 'GFG'
 // }
 
-obj = {
+const obj = {
     Company: "GeeksforGeeks",
     Address: "Noida",
     contact: "+91-999999999",
     mentor: {
         HTML: "GFG",
         CSS: "GFG",
-        JavaScript: "GFG"
-    }
+        JavaScript: "GFG",
+    },
 };
 console.log(flattenarr(obj));
 
 function flattenarr(obj) {
-    let res = {};
-    for (let i = 0 ; i < Object.keys(obj).length; i++) {
+    const res = {};
+    for (let i = 0; i < Object.keys(obj).length; i++) {
         let key = Object.keys(obj)[i];
-        if ((typeof obj[key]) === 'object') {
+        if (typeof obj[key] === "object") {
             const temp = flattenarr(obj[key]);
             for (const j in temp) {
-                res[key + '.' + j] = temp[j];
+                res[key + "." + j] = temp[j];
             }
-        }
-        else {
+        } else {
             res[key] = obj[key];
         }
     }
     return res;
 }
-
-
-

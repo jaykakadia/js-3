@@ -13,15 +13,15 @@
 // Output: true
 
 function isAnagram(str1, str2) {
-     let count = {};
+    const count = {};
      
      for (let i = 0; i < str1.length; i++) {
-       let ch = str1[i];
+       const ch = str1[i];
        count[ch] = (count[ch] || 0) + 1;
      }
 
      for (let i = 0; i < str2.length; i++) {
-       let ch = str2[i];
+       const ch = str2[i];
 
        if (!count[ch]) return false;
        count[ch]--;

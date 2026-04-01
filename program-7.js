@@ -55,7 +55,7 @@ const arr = [
     },
 ];
 function filterByProperty(arr, property, value) {
-    let result = [];
+    const result = [];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i][property] === value) {
             result.push(arr[i]);
