@@ -21,15 +21,10 @@ const set2 = new Set([3, 4]);
 function isSubset(set1, set2) {
     const arr1 = [...set1];
     const arr2 = [...set2];
-    for(let i = 0; i < set1.size; i++) {
-        let contains = false;
-        for(let j = 0; j < set2.size; j++) {
-             if(arr1[i] === arr2[j]) {
-                contains = true;
-                break;
-             }
-        }
-        if(!contains) {
+    if (arr1.length >= arr2.length) return false; 
+
+    for(let i = 0; i < arr1.length; i++) {
+        if(!arr2.includes(arr1[i])) {
             return false;
         }
     }

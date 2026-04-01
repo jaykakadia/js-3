@@ -64,26 +64,20 @@ const arr = [
 
 function countOccurrences(arr) {
   const output = [];
+  const map = {};
   for (let i = 0; i < arr.length; i++) {
-    let already_count = false;
-    for (let j = 0; j < output.length; j++) {
-      if (arr[i].employeeName == output[j].employeeName) {
-        already_count = true;
-        break;
-      }
+    const name = arr[i].employeeName;
+    if (map[name]){
+      map[name]++;
+    }else{
+      map[name] = 1;
     }
-    if (!already_count) {
-      let count = 0;
-      for (let j = 0; j < arr.length; j++) {
-        if (arr[i].employeeName == arr[j].employeeName) {
-          count++;
-        }
-      }
-      output.push({ employeeName: arr[i].employeeName, occurance: count });
-    }
+  }
+  const keysarr = Object.keys(map);
+  for(let i = 0; i < keysarr.length; i++){
+    output.push({employeeName: keysarr[i], occurance: map[keysarr[i]]});
   }
   return output;
 }
 console.log(countOccurrences(arr));
 
-console.log(countOccurrences(arr));

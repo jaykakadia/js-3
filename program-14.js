@@ -5,13 +5,18 @@
 
 function charFrequency(str) {
     const result = {};
+    // str = str.replace(" ", "");
     for (let i = 0; i < str.length; i++) {
-        if (result[str[i]]) {
-            result[str[i]]++;
-        } else {
-            result[str[i]] = 1;
+        if (str[i] == " "){
+            continue;
+        }else {
+            if (result[str[i]]) {
+                result[str[i]]++;
+            } else {
+                result[str[i]] = 1;
+            }
         }
     }
     return result;
 }
-console.log(charFrequency("helloolo"));
+console.log(charFrequency("hell. '' \"\"oolo"));

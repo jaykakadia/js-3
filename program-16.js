@@ -6,7 +6,7 @@
 
 // Output: [3, 4]
 
-const set1 = new Set([1, 2, 3, 4]);
+const set1 = new Set([1, 2, 3, 4, 3]);
 const set2 = new Set([3, 4, 5, 6]);
 
 function intersection(set1, set2) {

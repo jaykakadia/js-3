@@ -9,12 +9,12 @@ function generateCombinations(str) {
     for (let i = 0; i < str.length; i++) {
         for (let j = i + 1; j <= str.length; j++) {
             const currstr = str.substring(i, j);
-            combinations.push(currstr);
+            if (!combinations.includes(currstr)) combinations.push(currstr);
         }
     }
     return combinations;
     
 }
 
-console.log(generateCombinations("Dog"));
+console.log(generateCombinations("aaaaaa"));
 

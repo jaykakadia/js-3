@@ -28,7 +28,7 @@ function isAnagram(str1, str2) {
      }
     return true;
 }
-console.log(isAnagram("evil", "vile"));
+console.log(isAnagram("evi l", "v  ile"));
 console.log(isAnagram("a gentleman", "elegant man"));
 console.log(isAnagram("eleven plus two", "twelve plus one"));   
 console.log(isAnagram("hello", "Wp"));
